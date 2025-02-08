@@ -5,6 +5,7 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 import crossIcon from "../img/cross.png";
+import closeIcon from "../img/close.png";
 
 const datePicker = document.querySelector("#datetime-picker");
 const startButton = document.querySelector("[data-start]");
@@ -36,7 +37,7 @@ const options = {
                 buttons: [
                     [
                         `<button class="toast-close-btn">
-                <img src="../img/close.png" style="width: 12px; height: 12px;">
+                <img src="${closeIcon}" style="width: 12px; height: 12px;">
             </button>`,
                         function (instance, toast) {
                             instance.hide({ transitionOut: "fadeOut" }, toast);

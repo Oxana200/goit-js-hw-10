@@ -3,6 +3,7 @@ import "izitoast/dist/css/iziToast.min.css";
 
 import crossIcon from "../img/cross.png";
 import tickIcon from "../img/tick.png";
+import closeIcon from "../img/close.png";
 
 document.querySelector(".form").addEventListener("submit", (event) => {
     event.preventDefault();
@@ -32,7 +33,7 @@ document.querySelector(".form").addEventListener("submit", (event) => {
                 buttons: [
                     [
                         `<button class="toast-close-btn">
-                <img src="/img/close.png" style="width: 12px; height: 12px;">
+                <img src="${closeIcon}" style="width: 12px; height: 12px;">
             </button>`,
                         function (instance, toast) {
                             instance.hide({ transitionOut: "fadeOut" }, toast);
@@ -55,7 +56,7 @@ document.querySelector(".form").addEventListener("submit", (event) => {
                 buttons: [
                     [
                         `<button class="toast-close-btn">
-                <img src="/img/close.png" style="width: 12px; height: 12px;">
+                <img src="${closeIcon}" style="width: 12px; height: 12px;">
             </button>`,
                         function (instance, toast) {
                             instance.hide({ transitionOut: "fadeOut" }, toast);

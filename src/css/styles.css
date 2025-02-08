@@ -68,6 +68,17 @@ body {
   background: #c1c1c1 !important;
 }
 
+.flatpickr-time {
+  display: flex !important;
+  justify-content: center;
+}
+
+.flatpickr-time input {
+  width: 50px !important;
+  text-align: center;
+  font-size: 16px;
+}
+
 #datetime-picker {
   padding: 10px;
   font-size: 16px;
