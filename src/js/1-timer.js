@@ -36,7 +36,7 @@ const options = {
                 buttons: [
                     [
                         `<button class="toast-close-btn">
-                <img src="/img/close.png" style="width: 12px; height: 12px;">
+                <img src="../img/close.png" style="width: 12px; height: 12px;">
             </button>`,
                         function (instance, toast) {
                             instance.hide({ transitionOut: "fadeOut" }, toast);

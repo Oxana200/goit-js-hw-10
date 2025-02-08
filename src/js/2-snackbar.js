@@ -1,6 +1,9 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
+import crossIcon from "../img/cross.png";
+import tickIcon from "../img/tick.png";
+
 document.querySelector(".form").addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -17,26 +20,48 @@ document.querySelector(".form").addEventListener("submit", (event) => {
     promise
         .then((delay) => {
             iziToast.show({
-                title: "✅ OK",
+                title: "OK",
                 message: `Fulfilled promise in ${delay}ms`,
                 position: "topRight",
-                backgroundColor: "#4CAF50",
+                backgroundColor: "#59a10d",
                 titleColor: "#ffffff",
                 messageColor: "#ffffff",
-                iconUrl: "success-icon.png", // Додай відповідну іконку
+                iconUrl: tickIcon,
                 timeout: 5000,
+                close: false,
+                buttons: [
+                    [
+                        `<button class="toast-close-btn">
+                <img src="/img/close.png" style="width: 12px; height: 12px;">
+            </button>`,
+                        function (instance, toast) {
+                            instance.hide({ transitionOut: "fadeOut" }, toast);
+                        },
+                    ],
+                ],
             });
         })
         .catch((delay) => {
             iziToast.show({
-                title: "❌ Error",
-                message: `Illegal operation`,
+                title: "Error",
+                message: `Rejected promise in ${delay}ms`,
                 position: "topRight",
-                backgroundColor: "#E53935",
+                backgroundColor: "#ef4040",
                 titleColor: "#ffffff",
                 messageColor: "#ffffff",
-                iconUrl: "error-icon.png",
+                iconUrl: crossIcon,
                 timeout: 5000,
+                close: false,
+                buttons: [
+                    [
+                        `<button class="toast-close-btn">
+                <img src="/img/close.png" style="width: 12px; height: 12px;">
+            </button>`,
+                        function (instance, toast) {
+                            instance.hide({ transitionOut: "fadeOut" }, toast);
+                        },
+                    ],
+                ],
             });
         });
 

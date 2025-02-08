@@ -1,9 +1,32 @@
-/*------------- Timer ------------*/
-
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
 }
+
+.iziToast {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.toast-close-btn {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transform: translateY(35%);
+
+}
+
+.toast-close-btn img {
+  width: 12px;
+  height: 12px;
+}
+
+/*------------- Timer ------------*/
 
 .flatpickr-calendar {
   background: #f5f5f5 !important;
@@ -118,27 +141,105 @@ button[data-start]:disabled {
   color: #2e2f42;
 }
 
-.iziToast {
-  font-family: "Montserrat", sans-serif !important;
+
+/*------------- Snackbar ------------*/
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 400px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
-.toast-close-btn {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  cursor: pointer;
+label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+input[type="number"] {
+  padding: 10px;
+  outline: none;
+  transition: border 0.2s ease-in-out;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  margin-top: 8px;
+}
+
+input[type="number"]:hover {
+  border: 1px solid #000;
+}
+
+input[type="number"]:focus {
+  border: 1px solid #2563EB;
+}
+
+fieldset {
+  border-radius: 4px;
+  stroke-width: 1px;
+  stroke: #808080;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  transform: translateY(30%);
-
+  gap: 16px;
+  width: 360px;
+  padding: 10px;
+  margin: 0;
 }
 
-.toast-close-btn img {
-  width: 12px;
-  height: 12px;
+fieldset:hover {
+  border-color: #000;
 }
 
-/*------------- Snackbar ------------*/
+legend {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-left: 28px;
+}
+
+label input[type="radio"] {
+  margin-right: 8px;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+
+input[type="radio"]:checked {
+  accent-color: #2563EB;
+}
+
+button {
+  background: #4e75ff;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #6c8cff;
+}
+
+fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
