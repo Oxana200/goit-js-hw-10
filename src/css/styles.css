@@ -175,7 +175,7 @@ label {
   color: #2e2f42;
 }
 
-input[type="number"] {
+.delay {
   padding: 10px;
   outline: none;
   transition: border 0.2s ease-in-out;
@@ -185,11 +185,11 @@ input[type="number"] {
   margin-top: 8px;
 }
 
-input[type="number"]:hover {
+.delay:hover {
   border: 1px solid #000;
 }
 
-input[type="number"]:focus {
+.delay:focus {
   border: 1px solid #2563EB;
 }
 
